@@ -49,8 +49,8 @@ void merge_sort(int *array, int start, int end) {
     }
 }
 
-void merge_sort(int *array, int n) {
-    merge_sort(array, 0, n - 1);
+void merge_sort(int *array) {
+    merge_sort(array, 0, ARRAY_LENGTH - 1);
 }
 
 #endif //SORT_MERGE_SORT_H

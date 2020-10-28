@@ -6,22 +6,21 @@
 #include "merge_sort.h"
 
 int main() {
-    int n = 1000;
-    int *source = generate_random_array(n, 0, n);
+    int *source = generate_random_array(0, 10);
     std::cout << "source array : ";
-    display(source, n);
+    display(source);
 
-    int *bubble_sort_source = copy(source, n);
-    test("bubble sort", bubble_sort, bubble_sort_source, n);
+    int *bubble_sort_source = copy(source);
+    test("bubble sort", bubble_sort, bubble_sort_source);
 
-    int *selection_sort_source = copy(source, n);
-    test("selection sort", selection_sort, selection_sort_source, n);
+    int *selection_sort_source = copy(source);
+    test("selection sort", selection_sort, selection_sort_source);
 
-    int *insert_sort_source = copy(source, n);
-    test("insert sort", insert_sort, insert_sort_source, n);
+    int *insert_sort_source = copy(source);
+    test("insert sort", insert_sort, insert_sort_source);
 
-    int *merge_sort_source = copy(source, n);
-    test("merge sort", merge_sort, merge_sort_source, n);
+    int *merge_sort_source = copy(source);
+    test("merge sort", merge_sort, merge_sort_source);
 
     return 0;
 }

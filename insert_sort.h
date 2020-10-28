@@ -7,8 +7,8 @@
 
 #include <algorithm>
 
-void insert_sort(int *array, int n) {
-    for (int i = 1; i < n; i++) {
+void insert_sort(int *array) {
+    for (int i = 1; i < ARRAY_LENGTH; i++) {
         int j = i;
         int key = array[j];
         // 向前查找到比 key 小的位置

@@ -8,32 +8,34 @@
 #include <iostream>
 #include <assert.h>
 
-void display(int *array, int n) {
-    for (int i = 0; i < n; i++) {
+#define ARRAY_LENGTH 10
+
+void display(int *array) {
+    for (int i = 0; i < ARRAY_LENGTH; i++) {
         std::cout << array[i] << " ";
     }
     std::cout << std::endl;
 }
 
-int *copy(int *source, int n) {
-    int *result = new int[n];
-    for (int i = 0; i < n; i++) {
+int *copy(int *source) {
+    int *result = new int[ARRAY_LENGTH];
+    for (int i = 0; i < ARRAY_LENGTH; i++) {
         result[i] = source[i];
     }
     return result;
 }
 
 // 返回 [a, b) 范围，长度为 n 的数组
-int *generate_random_array(int n, int start, int end) {
+int *generate_random_array(int start, int end) {
     srand((unsigned) time(NULL));
-    int *result = new int[n];
-    for (int i = 0; i < n; i++)
+    int *result = new int[ARRAY_LENGTH];
+    for (int i = 0; i < ARRAY_LENGTH; i++)
         result[i] = (rand() % (end - start)) + start;
     return result;
 }
 
-bool check(int *array, int n) {
-    for (int i = 0; i < n - 1; i++) {
+bool check(int *array) {
+    for (int i = 0; i < ARRAY_LENGTH - 1; i++) {
         if (array[i] > array[i + 1]) {
             return false;
         }
@@ -41,12 +43,12 @@ bool check(int *array, int n) {
     return true;
 }
 
-void test(std::string name, void sort(int *, int), int *array, int n) {
+void test(std::string name, void sort(int *), int *array) {
     clock_t start_time, end_time;
     start_time = clock();
-    sort(array, n);
+    sort(array);
     end_time = clock();
-    assert(check(array, n));
+    assert(check(array));
     std::cout << name << " : " << (double) (end_time - start_time) / CLOCKS_PER_SEC << "s" << std::endl;
 }
 

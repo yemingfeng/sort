@@ -7,9 +7,9 @@
 
 #include <iostream>
 
-void bubble_sort(int *array, int n) {
-    for (int i = 0; i < n; i++) {
-        for (int j = n - 1; j > i; j--) {
+void bubble_sort(int *array) {
+    for (int i = 0; i < ARRAY_LENGTH; i++) {
+        for (int j = ARRAY_LENGTH - 1; j > i; j--) {
             if (array[j] < array[j - 1]) {
                 std::swap(array[j], array[j - 1]);
             }

@@ -8,10 +8,10 @@
 #include <algorithm>
 #include "array.h"
 
-void selection_sort(int *array, int n) {
-    for (int i = 0; i < n; i++) {
+void selection_sort(int *array) {
+    for (int i = 0; i < ARRAY_LENGTH; i++) {
         int minIndex = i;
-        for (int j = i + 1; j < n; j++) {
+        for (int j = i + 1; j < ARRAY_LENGTH; j++) {
             if (array[minIndex] > array[j]) {
                 minIndex = j;
             }
