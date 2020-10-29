@@ -6,5 +6,6 @@ CMakeFiles/sort.dir/main.cpp.o: ../bubble_sort.h
 CMakeFiles/sort.dir/main.cpp.o: ../insert_sort.h
 CMakeFiles/sort.dir/main.cpp.o: ../main.cpp
 CMakeFiles/sort.dir/main.cpp.o: ../merge_sort.h
+CMakeFiles/sort.dir/main.cpp.o: ../quick_sort.h
 CMakeFiles/sort.dir/main.cpp.o: ../selection_sort.h
 

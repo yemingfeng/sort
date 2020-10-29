@@ -8,7 +8,7 @@
 #include <iostream>
 #include <assert.h>
 
-#define ARRAY_LENGTH 10
+#define ARRAY_LENGTH 10000
 
 void display(int *array) {
     for (int i = 0; i < ARRAY_LENGTH; i++) {
@@ -27,7 +27,9 @@ int *copy(int *source) {
 
 // 返回 [a, b) 范围，长度为 n 的数组
 int *generate_random_array(int start, int end) {
-    srand((unsigned) time(NULL));
+    unsigned int seed = time(NULL);
+    std::cout << "seed is " << seed << std::endl;
+    srand(seed);
     int *result = new int[ARRAY_LENGTH];
     for (int i = 0; i < ARRAY_LENGTH; i++)
         result[i] = (rand() % (end - start)) + start;

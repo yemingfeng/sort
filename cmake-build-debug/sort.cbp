@@ -99,6 +99,9 @@
 		<Unit filename="/mnt/d/app/sort/merge_sort.h">
 			<Option target="sort"/>
 		</Unit>
+		<Unit filename="/mnt/d/app/sort/quick_sort.h">
+			<Option target="sort"/>
+		</Unit>
 		<Unit filename="/mnt/d/app/sort/selection_sort.h">
 			<Option target="sort"/>
 		</Unit>

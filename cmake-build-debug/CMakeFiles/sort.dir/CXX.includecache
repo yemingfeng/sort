@@ -33,8 +33,16 @@ insert_sort.h
 /mnt/d/app/sort/insert_sort.h
 merge_sort.h
 /mnt/d/app/sort/merge_sort.h
+quick_sort.h
+/mnt/d/app/sort/quick_sort.h
 
 /mnt/d/app/sort/merge_sort.h
+array.h
+/mnt/d/app/sort/array.h
+
+/mnt/d/app/sort/quick_sort.h
+algorithm
+-
 array.h
 /mnt/d/app/sort/array.h
 

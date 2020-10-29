@@ -9,4 +9,5 @@ add_executable(sort
         selection_sort.h
         bubble_sort.h
         insert_sort.h
-        merge_sort.h)
+        merge_sort.h
+        quick_sort.h)

@@ -4,6 +4,7 @@
 #include "bubble_sort.h"
 #include "insert_sort.h"
 #include "merge_sort.h"
+#include "quick_sort.h"
 
 int main() {
     int *source = generate_random_array(0, 10);
@@ -21,6 +22,9 @@ int main() {
 
     int *merge_sort_source = copy(source);
     test("merge sort", merge_sort, merge_sort_source);
+
+    int *quick_sort_source = copy(source);
+    test("quick sort", quick_sort, quick_sort_source);
 
     return 0;
 }
