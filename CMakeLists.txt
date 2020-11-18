@@ -10,4 +10,5 @@ add_executable(sort
         bubble_sort.h
         insert_sort.h
         merge_sort.h
-        quick_sort1.h)
+        quick_sort1.h
+        quick_sort2.h)

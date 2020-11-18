@@ -5,6 +5,7 @@
 #include "insert_sort.h"
 #include "merge_sort.h"
 #include "quick_sort1.h"
+#include "quick_sort2.h"
 
 int main() {
     int *source = generate_random_array(0, 10);
@@ -25,6 +26,10 @@ int main() {
 
     int *quick_sort1_source = copy(source);
     test("quick sort1", quick_sort1, quick_sort1_source);
+
+//    int *quick_sort2_source = copy(source);
+    int *quick_sort2_source = copy(source);
+    test("quick sort2", quick_sort2, quick_sort2_source);
 
     return 0;
 }
