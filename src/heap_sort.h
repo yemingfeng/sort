@@ -14,8 +14,10 @@ struct min_heap {
         this->data = new int[ARRAY_LENGTH + 1];
         for (int i = 1; i <= ARRAY_LENGTH; i++) {
             this->data[i] = data[i - 1];
-            shift_up(i);
             count++;
+        }
+        for (int i = count / 2; i >= 1; i--) {
+            shift_down(i);
         }
     }
 
