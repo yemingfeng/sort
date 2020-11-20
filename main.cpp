@@ -6,9 +6,10 @@
 #include "src/merge_sort.h"
 #include "src/quick_sort1.h"
 #include "src/quick_sort2.h"
+#include "src/heap_sort.h"
 
 int main() {
-    int *source = generate_random_array(0, 10);
+    int *source = generate_random_array(0, 1000);
     std::cout << "source array : ";
     display(source);
 
@@ -29,6 +30,9 @@ int main() {
 
     int *quick_sort2_source = copy(source);
     test("quick sort2", quick_sort2, quick_sort2_source);
+
+    int *heap_sort_source = copy(source);
+    test("heap sort", heap_sort, heap_sort_source);
 
     return 0;
 }
