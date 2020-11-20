@@ -17,10 +17,10 @@ void quick_sort2(int *array, int start, int end) {
     int j = end;
 
     while (true) {
-        while (array[i] < array[start] && i <= end) {
+        while (array[i] < array[start] && i <= j) {
             i++;
         }
-        while (array[j] > array[start] && j >= start + 1) {
+        while (array[j] > array[start] && j >= i) {
             j--;
         }
         if (i >= j) {
