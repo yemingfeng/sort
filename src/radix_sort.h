@@ -8,16 +8,6 @@
 #include "array.h"
 #include <vector>
 
-int find_max_value(int *array) {
-    int max_value = array[0];
-    for (int i = 1; i < ARRAY_LENGTH; i++) {
-        if (max_value < array[i]) {
-            max_value = array[i];
-        }
-    }
-    return max_value;
-}
-
 void radix_sort(int *array) {
     int max_value = find_max_value(array);
     int radix = 1;

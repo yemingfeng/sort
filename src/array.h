@@ -55,4 +55,24 @@ void test(std::string name, void sort(int *), int *array) {
     std::cout << name << " : " << (double) (end_time - start_time) / CLOCKS_PER_SEC << "s" << std::endl;
 }
 
+int find_max_value(int *array) {
+    int max_value = array[0];
+    for (int i = 1; i < ARRAY_LENGTH; i++) {
+        if (max_value < array[i]) {
+            max_value = array[i];
+        }
+    }
+    return max_value;
+}
+
+int find_min_value(int *array) {
+    int min_value = array[0];
+    for (int i = 1; i < ARRAY_LENGTH; i++) {
+        if (min_value > array[i]) {
+            min_value = array[i];
+        }
+    }
+    return min_value;
+}
+
 #endif //SORT_ARRAY_H
