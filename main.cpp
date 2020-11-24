@@ -8,6 +8,7 @@
 #include "src/quick_sort2.h"
 #include "src/heap_sort.h"
 #include "src/shell_sort.h"
+#include "src/radix_sort.h"
 
 int main() {
     int *source = generate_random_array(0, 1000);
@@ -37,6 +38,9 @@ int main() {
 
     int *shell_sort_source = copy(source);
     test("shell sort", shell_sort, shell_sort_source);
+
+    int *radix_sort_source = copy(source);
+    test("radix sort", radix_sort, radix_sort_source);
 
     return 0;
 }
