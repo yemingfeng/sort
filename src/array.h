@@ -39,6 +39,7 @@ int *generate_random_array(int start, int end) {
 bool check(int *array) {
     for (int i = 0; i < ARRAY_LENGTH - 1; i++) {
         if (array[i] > array[i + 1]) {
+            std::cout << "array[" << (i + 1) << "] = " << array[i + 1] << " error" << std::endl;
             return false;
         }
     }
