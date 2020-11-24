@@ -10,6 +10,7 @@
 #include "src/shell_sort.h"
 #include "src/radix_sort.h"
 #include "src/bucket_sort.h"
+#include "src/count_sort.h"
 
 int main() {
     int *source = generate_random_array(0, 1000);
@@ -45,6 +46,9 @@ int main() {
 
     int *bucket_sort_source = copy(source);
     test("bucket sort", bucket_sort, bucket_sort_source);
+
+    int *count_sort_source = copy(source);
+    test("count sort", count_sort, count_sort_source);
 
     return 0;
 }
